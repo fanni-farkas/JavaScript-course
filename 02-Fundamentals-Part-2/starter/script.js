@@ -1,0 +1,221 @@
+/*
+"use strict";
+
+let hasDriversLicense = false;
+const passTest = true;
+
+if (passTest) hasDriversLicense = true;
+if (hasDriversLicense) console.log("I can drive")
+
+function logger() {
+    console.log("My name is Fanni")
+}
+
+logger();
+logger();
+logger();
+
+function fruitProcessor(apples, oranges) {
+    const juice = `juice with ${apples} apples and ${oranges} oranges`;
+    return juice;
+}
+
+const applejuice = fruitProcessor(5, 0);
+console.log(applejuice);
+
+const appleOrangeJuice = fruitProcessor(2, 4);
+
+console.log(appleOrangeJuice);
+
+const num = Number("23")
+
+//Function declaration
+const age1 = calcAge1(2004);
+
+function calcAge1(birthyear) {
+    return 2023 - birthyear;
+}
+
+console.log(age1)
+
+//Function expression
+const calcAge2 = function (birthyear) {
+    return 2023 - birthyear;
+}
+
+const age2 = calcAge2(2004);
+
+console.log(age1, age2);
+
+//Arrow function
+const calcAge3 = birthyear => 2023 - birthyear;
+
+const age3 = calcAge3(2004);
+console.log(age3);
+
+const untilRetirement = (birthyear, firstName) => {
+    const age = 2023 - birthyear;
+    const retirement = 65 - age;
+    // return retirement;
+    return `${firstName} retires in ${retirement} years`
+}
+
+console.log(untilRetirement(2004, "Fanni"));
+console.log(untilRetirement(2003, "Szabi"));
+
+function cutFruit(fruit) {
+    return fruit * 4;
+}
+
+function fruitProcessor(apples, oranges) {
+    const applePieces = cutFruit(apples);
+    const orangePieces = cutFruit(oranges);
+
+    const juice = `Juice with ${applePieces} pieces of apple and ${orangePieces} pieces of orange`;
+    return juice;
+}
+
+
+console.log(fruitProcessor(2, 3));
+
+const calcAge = function (birthyear) {
+    return 2037 - birthyear;
+}
+
+const untilRetirement = function (birthyear, firstName) {
+    const age = calcAge(birthyear);
+    const retirement = 65 - age;
+
+    if (retirement > 0) {
+        console.log(`${firstName} retires in ${retirement} years`)
+        return retirement;
+    } else {
+        console.log(`${firstName} has already retired`)
+        return -1;
+    }
+
+    return retirement;
+    //return `${firstName} retires in ${retirement} years`
+}
+
+console.log(untilRetirement(2004, "Fanni"));
+console.log(untilRetirement(1950, "Szabi"));
+
+//CHALLENGE 1
+
+const calcAverage = (score1, score2, score3) =>
+    (score1 + score2 + score3) / 3;
+
+
+const avgDolphins = calcAverage(85, 54, 41);
+const avgKoalas = calcAverage(23, 34, 27);
+
+console.log(avgDolphins);
+console.log(avgKoalas);
+
+
+const checkWinner = function (avgDolphins, avgKoalas) {
+    if (avgDolphins >= avgKoalas * 2) {
+        console.log(`The Dolphins Win ${avgDolphins} vs ${avgKoalas}`);
+    } else if (avgDolphins >= avgKoalas * 2) {
+        console.log(`The Koalas Win ${avgKoalas} vs ${avgDolphins}`);
+    } else {
+        console.log("No team wins");
+    }
+}
+
+checkWinner(avgDolphins, avgKoalas);
+
+const friend1 = 'Michael';
+const friend2 = 'Steven';
+const friend3 = 'Peter';
+
+const friends = ["Michael", "Steven", "Peter"];
+console.log(friends);
+
+const y = new Array(1991, 1984, 2008, 2020);
+
+console.log(friends[0]);
+console.log(friends[2]);
+
+console.log(friends.length);
+console.log(friends[friends.length - 1]);
+
+friends[2] = "Jay";
+console.log(friends)
+//friends = ["Bob", "Alice"]
+
+const firstName = "Fanni";
+const Fanni = ["firstName", "Farkas", 2023 - 2004, friends];
+console.log(Fanni);
+
+//Exercise
+const calcAge = function (birthyear) {
+    return 2037 - birthyear;
+}
+
+const years = [1990, 1967, 2002, 2010, 2018];
+
+const age1 = calcAge(years[0]);
+const age2 = calcAge(years[1]);
+const age3 = calcAge(years[years.length - 1]);
+
+console.log(age1, age2, age3);
+
+const ages = [calcAge(years[0]), calcAge(years[1]), calcAge(years.length - 1)];
+
+console.log(ages);
+
+const friends = ["Michael", "Steven", "Peter"];
+
+//Add elements
+const newLength = friends.push("Jay");
+console.log(friends);
+console.log(newLength);
+
+friends.unshift("John");
+console.log(friends);
+
+//Remove elements
+friends.pop()
+const popped = friends.pop(); //remove last element of array and returns it
+console.log(popped)
+console.log(friends)
+
+friends.shift(); //first
+console.log(friends);
+
+console.log(friends.indexOf("Steven"));
+console.log(friends.indexOf("Bob"));
+
+friends.push(23);
+console.log(friends.includes("Steven"));
+console.log(friends.includes("Bob"));
+console.log(friends.includes("23")); //returns false because it checks for strict equality
+console.log(friends.includes(23));
+
+if (friends.includes("Steven")) {
+    console.log(`You have a friend called Steven`);
+}
+*/
+
+
+//CHALLENGE 2
+const bills = [125, 555, 44];
+const total = []
+
+// function calcTip(bill) {
+//     if (bill >= 50 && bill <= 300) {
+//         console.log(`The bill was ${bill}$ and the tip was ${bill * 0.15}$ (15%) and the total is ${bill + (bill * 0.15)}$`)
+//     } else {
+//         console.log(`The bill was ${bill}$ and the tip was ${bill * 0.2}$ (20%) and the total is ${bill + (bill * 0.2)}$`)
+//     }
+// }
+
+const calcTip = function (bill) {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.20
+}
+
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])]
+
+console.log(tips)
