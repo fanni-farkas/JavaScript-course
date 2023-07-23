@@ -197,7 +197,6 @@ console.log(friends.includes(23));
 if (friends.includes("Steven")) {
     console.log(`You have a friend called Steven`);
 }
-*/
 
 
 //CHALLENGE 2
@@ -219,3 +218,117 @@ const calcTip = function (bill) {
 const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])]
 
 console.log(tips)
+
+const fanniArray = [
+    "Fanni",
+    "Farkas",
+    2023 - 2004,
+    ["Szabi", "Pamacs", "Panda"],
+];
+
+const fanni = {
+    firstName: 'Fanni',
+    lastName: "Farkas",
+    age: 2023 - 2004,
+    friend: ["Szabi"]
+};
+
+console.log(fanni)
+
+const fanni = {
+    firstName: 'Fanni',
+    lastName: "Farkas",
+    age: 2023 - 2004,
+    friends: ["Szabi", "Berni", "Greti"]
+};
+
+console.log(fanni);
+
+console.log(fanni.lastName);
+console.log(fanni["lastName"]);
+
+const nameKey = "Name";
+console.log(fanni["first" + nameKey]);
+console.log(fanni["last" + nameKey]);
+
+const interestedIn = prompt("What do you eant to know about Fanni? Choose between firstName, lastName, age and friend")
+console.log(fanni[interestedIn]);
+
+if (fanni[interestedIn]) {
+    console.log(fanni[interestedIn])
+} else {
+    console.log("Wrong request")
+}
+
+fanni.location = "Budapest";
+fanni["instagram"] = '@fanni.frkas'
+console.log(fanni);
+
+//Challenge
+console.log(`${fanni.firstName} has ${(fanni.friends).length} friends, and her best friend is called ${fanni.friends[0]}`);
+
+const fanni = {
+    firstName: 'Fanni',
+    lastName: "Farkas",
+    birthyear: 2004,
+    age: 2023 - 2004,
+    job: "programmer",
+    friends: ["Szabi", "Berni", "Greti"],
+    hasDriversLicense: true,
+
+    // calcAge: function () {
+    //     console.log(this)
+    //     return 2023 - this.birthyear
+    // }
+    calcAge: function () {
+        this.age = 2023 - this.birthyear;
+        return this.age
+    },
+
+    getSummary: function () {
+        return `${this.firstName} is a ${this.calcAge()} year old ${fanni.job} and she has ${this.hasDriversLicense ? "a" : "no"} drivers license`
+    }
+}
+
+console.log(fanni.calcAge());
+
+console.log(fanni.age);
+console.log(fanni.age);
+console.log(fanni.age);
+
+//Challenge
+
+//console.log(fanni['calcAge'](2004));
+
+console.log(fanni.getSummary())
+
+//CHALLENGE 3
+
+mark = {
+    fullName: 'Mark Miller',
+    mass: 78,
+    height: 1.69,
+
+    calcBMI: function () {
+        this.BMI = this.mass / (this.height * this.height);
+        return this.BMI
+    }
+}
+
+john = {
+    fullName: 'John Smith',
+    mass: 92,
+    height: 1.95,
+
+    calcBMI: function () {
+        this.BMI = this.mass / (this.height * this.height);
+        return this.BMI
+    }
+}
+console.log(mark.calcBMI())
+console.log(john.calcBMI())
+
+if (john.BMI > mark.BMI) {
+    console.log(`${john.fullName}'s BMI (${john.BMI}) is higher than ${mark.fullName}'s BMI (${mark.BMI})`)
+} else console.log(`${mark.fullName}'s BMI (${mark.BMI}) is higher than ${john.fullName}'s BMI (${john.BMI})`);
+*/
