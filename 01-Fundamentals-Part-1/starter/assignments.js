@@ -79,6 +79,92 @@ console.log(
     `${country}'s population is ${population > 33 ? 'above' :
         'below'} average`,
 );
+
+const describeCountry = function (country, population, capitalCity) {
+    console.log(`${country} has a population of ${population} million and it's capital city is ${capitalCity}`)
+}
+describeCountry("Finnland", 6, "Helsinki")
+describeCountry("Japan", 130, "Tokyo")
+describeCountry("France", 70, "Paris")
+
+//FUNCTION DECLARATION
+function percentageOfWorld1(population) {
+    return (population / 7900) * 100
+}
+percentageOfWorld1(130)
+
+//FUNCTION EXPRRESSION
+const percentageOfWorld2 = function (population) {
+    console.log((population / 7900) * 100)
+}
+percentageOfWorld2(130);
+
+
+//ARROW FUNCTION
+const percentageOfWorld3 = (population) => {
+    console.log((population / 7900) * 100)
+}
+percentageOfWorld3(130);
+
+
+function describePopulation(country, population) {
+    const percentage = percentageOfWorld1(population);
+    const description = `${country} has ${population} million people, which is about ${percentage}% of the world.`;
+    console.log(description);
+};
+describePopulation('China', 1441)
+
+const populations = [6, 70, 130, 1441]
+
+console.log(populations.length === 4)
+
+percentages = [
+    percentageOfWorld1(populations[0]),
+    percentageOfWorld1(populations[1]),
+    percentageOfWorld1(populations[2]),
+    percentageOfWorld1(populations[3]),
+]
+
+console.log(percentages)
+
+let neighbours = ['Croatia', 'Romaniaaa', 'Austria', 'Serbia', 'Slovenia', 'Ukraine', 'Slovakia']
+
+neighbours.push('Utopia')
+console.log(neighbours)
+
+if (!neighbours.includes('Germany')) {
+    console.log('Probably not a central European country :D');
+}
+
+neighbours[neighbours.indexOf("Romaniaaa")] = 'Romania'
+console.log(neighbours);
 */
 
-function describeCountry(country, population, capitalCity)
+myCountry = {
+    country: 'Hungary',
+    capital: 'Budapest',
+    language: 'hungarian',
+    population: 10,
+    neighbours: ['Croatia', 'Romaniaaa', 'Austria', 'Serbia', 'Slovenia', 'Ukraine', 'Slovakia'],
+
+    describe: function () {
+        console.log(`${this.country} has ${this.population} million ${this.language}-speaking people, ${this.neighbours.length} neighbouring countries and a capital called ${this.capital}`)
+    },
+
+    isIsland: function () {
+        this.isIsland = this.neighbours.length === 0 ? true : false;
+    }
+}
+
+myCountry.describe()
+myCountry.isIsland()
+console.log(myCountry)
+
+
+console.log(`${myCountry.country} has ${myCountry.population} million ${myCountry.language}-speaking people, ${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry.capital}`)
+
+myCountry.population += 2;
+console.log(myCountry.population);
+
+myCountry['population'] -= 2;
+console.log(myCountry.population);
