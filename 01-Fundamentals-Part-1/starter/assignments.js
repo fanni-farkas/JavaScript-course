@@ -87,20 +87,20 @@ describeCountry("Finnland", 6, "Helsinki")
 describeCountry("Japan", 130, "Tokyo")
 describeCountry("France", 70, "Paris")
 
-//FUNCTION DECLARATION
+//FUNCTION DECLARATION------------------------------------------------------
 function percentageOfWorld1(population) {
     return (population / 7900) * 100
 }
 percentageOfWorld1(130)
 
-//FUNCTION EXPRRESSION
+//FUNCTION EXPRRESSION------------------------------------------------------
 const percentageOfWorld2 = function (population) {
     console.log((population / 7900) * 100)
 }
 percentageOfWorld2(130);
 
 
-//ARROW FUNCTION
+//ARROW FUNCTION--------------------------------------------------------------------
 const percentageOfWorld3 = (population) => {
     console.log((population / 7900) * 100)
 }
