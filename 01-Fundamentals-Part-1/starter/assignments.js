@@ -112,11 +112,11 @@ function describePopulation(country, population) {
     const description = `${country} has ${population} million people, which is about ${percentage}% of the world.`;
     console.log(description);
 };
-describePopulation('China', 1441)
+describePopulation('China', 1441);
 
-const populations = [6, 70, 130, 1441]
+const populations = [6, 70, 130, 1441];
 
-console.log(populations.length === 4)
+console.log(populations.length === 4);
 
 percentages = [
     percentageOfWorld1(populations[0]),
@@ -138,7 +138,6 @@ if (!neighbours.includes('Germany')) {
 
 neighbours[neighbours.indexOf("Romaniaaa")] = 'Romania'
 console.log(neighbours);
-*/
 
 myCountry = {
     country: 'Hungary',
@@ -156,15 +155,56 @@ myCountry = {
     }
 }
 
-myCountry.describe()
-myCountry.isIsland()
-console.log(myCountry)
+myCountry.describe();
+myCountry.isIsland();
+console.log(myCountry);
 
 
-console.log(`${myCountry.country} has ${myCountry.population} million ${myCountry.language}-speaking people, ${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry.capital}`)
+console.log(`${myCountry.country} has ${myCountry.population} million ${myCountry.language}-speaking people, ${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry.capital}`);
 
 myCountry.population += 2;
 console.log(myCountry.population);
 
 myCountry['population'] -= 2;
 console.log(myCountry.population);
+
+
+for (let voting = 0; voting <= 10; voting++) {
+    console.log(`voter number ${voting} is voting`);
+}
+
+const listOfNeighbours = [['Canada', 'Mexico'], ['Spain'], ['Norway', 'Sweden', 'Russia']];
+
+for (let i = 0; i < listOfNeighbours.length; i++);
+for (let y = 0; y < listOfNeighbours[i].length; y++);
+console.log(`neihbour: ${listOfNeighbours[i][y]}`);
+*/
+
+const populations = [10, 1441, 332, 83];
+// const percentages2 = [];
+
+const percentageOfWorld1 = function (population) {
+    console.log((population / 7900) * 100)
+}
+
+// for (let i = 0; i < populations.length; i++) {
+//     const perc = percentageOfWorld1(populations[i]);
+//     percentages2.push(perc);
+// }
+// console.log(percentages2);
+
+// while (i < populations.length) {
+//     const perc = percentageOfWorld1(populations[i]);
+//     percentages3.push(perc);
+//     i++
+// }
+
+// console.log(percentages3)
+
+const percentages3 = [];
+let i = 0;
+while (i < populations.length) {
+    const perc = percentageOfWorld1(populations[i]);
+    percentages3.push(perc);
+    i++;
+}
