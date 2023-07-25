@@ -331,4 +331,122 @@ console.log(john.calcBMI())
 if (john.BMI > mark.BMI) {
     console.log(`${john.fullName}'s BMI (${john.BMI}) is higher than ${mark.fullName}'s BMI (${mark.BMI})`)
 } else console.log(`${mark.fullName}'s BMI (${mark.BMI}) is higher than ${john.fullName}'s BMI (${john.BMI})`);
+
+
+//console.log('Lifting weights repetition 1');
+//console.log('Lifting weights repetition 2');
+//console.log('Lifting weights repetition 3'); ....
+
+
+
+for (let rep = 1; rep <= 10; rep++) {
+    console.log(`Lifting weights repetition ${rep}`);
+}
+
+
+const fanni = [
+    "Fanni",
+    "Farkas",
+    2023 - 2004,
+    ["Szabi", "Pamacs", "Panda"],
+    true,
+];
+
+const types = [];
+
+for (let i = 0; i < fanni.length; i++) {
+    console.log(fanni[i], typeof fanni[i]);
+
+    //types[i] = typeof fanni[i];
+    types.push(typeof fanni[i])
+}
+
+console.log(types)
+
+const years = [1991, 2007, 2004, 2020]
+const ages = []
+
+for (let i = 0; i < years.length; i++) {
+    ages.push(2023 - years[i])
+}
+console.log(ages)
+
+//continue and break
+
+console.log('----ONLY STRINGS----')
+for (let i = 0; i < fanni.length; i++) {
+    if (typeof fanni[i] !== 'string') continue;
+
+    console.log(fanni[i], typeof fanni[i]);
+}
+
+console.log('----BREAK WITH NUMBER----')
+for (let i = 0; i < fanni.length; i++) {
+    if (typeof fanni[i] === 'number') break;
+
+    console.log(fanni[i], typeof fanni[i])
+}
+
+
+const fanni = [
+    "Fanni",
+    "Farkas",
+    2023 - 2004,
+    ["Szabi", "Pamacs", "Panda"],
+    true,
+];
+
+for (let i = fanni.length - 1; i >= 0; i--) {
+    console.log(i, fanni[i])
+}
+
+for (let exercise = 1; exercise < 4; exercise++) {
+    console.log(`----Starting exerxise ${exercise}`);
+
+    for (let rep = 1; rep < 6; rep++) {
+        console.log(`Exercise ${exercise}: Lifting weight repetition ${rep}`);
+    }
+
+}
+
+
+for (let rep = 1; rep <= 10; rep++) {
+    console.log(`Lifting weights repetition ${rep}`);
+}
+
+let rep = 1;
+while (rep <= 10) {
+    //console.log(`Lifting weights repetition ${rep} `);
+    rep++;
+}
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+
+while (dice !== 6) {
+    console.log(`You rolled a ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1;
+    if (dice === 6) console.log('loop is about to end, you rolled a 6')
+}
 */
+
+
+
+const calcTip = function (bill) {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+}
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips = [];
+const totals = [];
+
+for (let i = 0; i < bills.length; i++) {
+    const tip = calcTip(bills[i]);
+    tips.push(tip);
+    totals.push(tip + bills[i])
+}
+
+console.log(bills, tips, totals)
+
+
+
+
