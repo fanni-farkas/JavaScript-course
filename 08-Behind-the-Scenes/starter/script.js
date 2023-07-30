@@ -1,4 +1,5 @@
 'use strict';
+
 /*
 function calcAge(birthYear) {
   const age = 2023 - birthYear;
@@ -25,7 +26,6 @@ function calcAge(birthYear) {
 
 const firstName = 'Fanni';
 calcAge(1991);
-*/
 
 // Variables
 console.log(me);
@@ -40,8 +40,6 @@ const year = 1991;
 console.log(addDecl(2, 3));
 //console.log(addExpr(2, 3));
 //console.log(addArrow(2, 3));
-
-
 
 function addDecl(a, b) {
   return a + b;
@@ -62,10 +60,64 @@ function deleteShoppingCart() {
   console.log('All products deleted');
 }
 
-var x = 1
-let y = 2
-const z = 3
+var x = 1;
+let y = 2;
+const z = 3;
 
 console.log(x === window.x);
 console.log(y === window.y);
 console.log(z === window.z);
+
+
+//console.log(this);
+
+const calcAge = function(birthYear) {
+    console.log(2023 - birthYear);
+    //console.log(this);
+}
+calcAge(2004);
+
+
+const calcAgeArrow = birthYear => {
+    console.log(2023 - birthYear);
+    //console.log(this);
+}
+calcAgeArrow(2004);
+
+
+const Fanni = {
+    year: 2004,
+    calcAge: function(){
+        console.log(this);
+        console.log(2023 - this.year);
+    }
+}
+Fanni.calcAge()
+
+
+const Szabi = {
+    year: 2003,
+}
+
+Szabi.calcAge = Fanni.calcAge
+Szabi.calcAge()
+
+const f = Fanni.calcAge
+f()
+*/
+
+//var firstName = 'Matilda'
+
+const Fanni = {
+    firstName: 'Fanni',
+    year: 2004,
+    calcAge: function(){
+        console.log(this);
+        console.log(2023 - this.year);
+    },
+
+    greet: () => {
+        console.log(this);
+        console.log(`hey ${this.firstName}`)}
+};
+Fanni.greet();
