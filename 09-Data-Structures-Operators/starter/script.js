@@ -59,6 +59,7 @@ const restaurant = {
   },
 };
 
+/*
 // WORKING WITH STRINGS ----------------------------------------------------------------------
 
 const getCode = str => str.slice(0, 3).toUpperCase();
@@ -96,7 +97,7 @@ document.querySelector('button').addEventListener('click', function () {
   }
 });
 
-/*
+
 // SPLIT AND JOIN
 console.log('a+very+nice+string'.split('+'));
 console.log('Fanni Farkas'.split(' '));
