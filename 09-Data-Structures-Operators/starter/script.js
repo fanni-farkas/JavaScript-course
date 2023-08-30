@@ -59,7 +59,7 @@ const restaurant = {
   },
 };
 
-/*
+/*w
 // WORKING WITH STRINGS ----------------------------------------------------------------------
 
 const getCode = str => str.slice(0, 3).toUpperCase();
