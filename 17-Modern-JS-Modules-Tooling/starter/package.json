@@ -1,0 +1,11 @@
+{
+  "name": "complete-javascript-course-master",
+  "version": "1.0.0",
+  "description": "This repository contains the code that I've written when taking The-Complete-JavaScript-Course-2023-From-Zero-to-Expert from Jonas Schmedtmann course.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

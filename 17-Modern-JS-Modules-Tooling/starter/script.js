@@ -94,3 +94,11 @@ export.addToCart = function (product, quantity) {
   // IMPPORT
   const {addToCart} = require('./shoppingCart')
   */
+
+const state = {
+  cart: [
+    { product: 'bread', quantity: 5 },
+    { product: 'pizza', quantity: 5 },
+  ],
+  user: { loggedIn: true },
+};
