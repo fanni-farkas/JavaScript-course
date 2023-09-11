@@ -1,6 +1,5 @@
 // IMPORTING MODULE
 
-/*
 //import { addToCart, totalPrice as price, tq } from './shoppingCart.js';
 
 // addToCart('bread', 5);
@@ -16,13 +15,14 @@ console.log('IMPORTING MODULE');
 // import add, { addToCart, totalPrice as price, tq } from './shoppingCart.js';
 // console.log(price);
 
-import add, { cart } from './shoppingCart.js';
-add('pizza', 2);
-add('bread', 5);
-add('apples', 4);
+import addToCart, { cart } from './shoppingCart.js';
+
+addToCart('pizza', 2);
+addToCart('bread', 5);
+addToCart('apples', 4);
 
 console.log(cart);
-
+/*
 ///////////////////////////////////////
 // Top-Level Await (ES2022)
 
@@ -93,7 +93,10 @@ export.addToCart = function (product, quantity) {
 
   // IMPPORT
   const {addToCart} = require('./shoppingCart')
-  */
+  
+*/
+
+//import cloneDeep from 'lodash-es/cloneDeep';
 
 const state = {
   cart: [
@@ -102,3 +105,17 @@ const state = {
   ],
   user: { loggedIn: true },
 };
+
+// Importing
+const stateDeepClone = _.cloneDeep(state);
+const stateClone = Object.assign({}, state);
+// const stateDeepClone = cloneDeep(state);
+
+state.user.loggedIn = false;
+console.log(stateClone);
+
+console.log(stateDeepClone);
+
+if (module.hot) {
+  module.hot.accept();
+}
