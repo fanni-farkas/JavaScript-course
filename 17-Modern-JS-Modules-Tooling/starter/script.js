@@ -119,3 +119,22 @@ console.log(stateDeepClone);
 if (module.hot) {
   module.hot.accept();
 }
+
+class Person {
+  greeting = 'Hey';
+  constructor(name) {
+    this.name = name;
+    console.log(`${this.greeting}, ${this.name}`);
+  }
+}
+
+const fanni = new Person('Fanni');
+
+console.log('Fanni' ?? null);
+
+console.log(cart.find(el => el.quantity >= 2));
+
+Promise.resolve('TEST').then(x => console.log(x));
+
+// Polifiling anync functions
+import 'regenerator-runtime/runtime';
